@@ -3,7 +3,7 @@ using System.Linq;
 using Alsein.Utilities;
 using DatabaseTest.Models;
 
-namespace DatabaseTest
+namespace DatabaseTest.Services
 {
     internal class MainService : IMainService
     {
