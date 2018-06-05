@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseTest.Common\DatabaseTest.Common.csproj" />
+    <ProjectReference Include="..\DatabaseTest.MongoDB\DatabaseTest.MongoDB.csproj" />
+    <ProjectReference Include="..\DatabaseTest.Core\DatabaseTest.Core.csproj" />
+  </ItemGroup>
+
+</Project>
