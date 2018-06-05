@@ -12,7 +12,6 @@ namespace DatabaseTest.Services
         public void Main(string[] args)
         {
             var person = DatabaseService["test"].GetRepository<Person>();
-            var tt = DatabaseService.ToArray();
 
             var adam = new Person { Name = "Adam", Age = 10 };
             var eva = new Person { Name = "Eva", Age = 15 };
