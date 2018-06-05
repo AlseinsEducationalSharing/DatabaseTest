@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DatabaseTest.Services.Database.MongoDB
+namespace DatabaseTest.MongoDB
 {
     internal partial class MongoDatabaseService : IDatabaseService
     {

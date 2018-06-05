@@ -4,7 +4,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Clusters;
 
-namespace DatabaseTest.Services.Database.MongoDB
+namespace DatabaseTest.MongoDB
 {
     internal partial class MongoDatabaseService : IMongoClient
     {

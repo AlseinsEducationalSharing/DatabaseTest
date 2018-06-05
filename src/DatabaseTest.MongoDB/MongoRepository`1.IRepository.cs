@@ -7,7 +7,7 @@ using Alsein.Utilities;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 
-namespace DatabaseTest.Services.Database.MongoDB
+namespace DatabaseTest.MongoDB
 {
     internal partial class MongoRepository<TModel> : IRepository<TModel> where TModel : ModelBase
     {

@@ -1,4 +1,4 @@
-namespace DatabaseTest.Services.Database.MongoDB
+namespace DatabaseTest.MongoDB
 {
     internal class MongoRepository : IRepository
     {

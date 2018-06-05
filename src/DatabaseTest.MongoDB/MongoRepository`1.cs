@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using MongoDB.Driver;
 
-namespace DatabaseTest.Services.Database.MongoDB
+namespace DatabaseTest.MongoDB
 {
     internal partial class MongoRepository<TModel> : MongoRepository
     {
