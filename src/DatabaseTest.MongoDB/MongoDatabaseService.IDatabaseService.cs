@@ -6,7 +6,7 @@ namespace DatabaseTest.MongoDB
 {
     internal partial class MongoDatabaseService : IDatabaseService
     {
-        public IDatabase this[string name] => new MongoDatabase(MongoClient.GetDatabase(name));
+        public IDatabase this[string name] => new MongoDatabase(_mongoClient.GetDatabase(name));
 
         public IEnumerator<IDatabase> GetEnumerator() => databases.GetEnumerator();
 

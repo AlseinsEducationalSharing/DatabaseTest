@@ -6,12 +6,14 @@ namespace DatabaseTest.MongoDB
 {
     internal partial class MongoDatabaseService
     {
-        public IMongoClient MongoClient { get; set; }
+        private IMongoClient _mongoClient { get; set; }
 
-        private IEnumerable<IDatabase> databases => MongoClient.ListDatabases().ToEnumerable().Select(data => this[data["name"].ToString()]);
+        private IEnumerable<IDatabase> databases => _mongoClient.ListDatabases().ToEnumerable().Select(data => this[data["name"].ToString()]);
 
-        public override bool Equals(object obj) => obj is MongoDatabaseService service && MongoClient == service.MongoClient;
+        public override bool Equals(object obj) => obj is MongoDatabaseService service && _mongoClient == service._mongoClient;
 
         public override int GetHashCode() => base.GetHashCode();
+
+        public MongoDatabaseService(IMongoClient mongoClient) => _mongoClient = mongoClient;
     }
 }
