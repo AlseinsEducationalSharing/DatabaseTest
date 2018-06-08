@@ -4,6 +4,6 @@ namespace DatabaseTest
     {
         string Name { get; }
         IDatabase Database { get; }
-        IRepository<TModel> As<TModel>() where TModel : ModelBase;
+        IRepository<TModel> As<TModel>() where TModel : IModel;
     }
 }

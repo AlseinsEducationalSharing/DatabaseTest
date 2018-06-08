@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Alsein.Utilities;
-using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 
 namespace DatabaseTest.MongoDB
 {
-    internal partial class MongoRepository<TModel> : IRepository<TModel> where TModel : ModelBase
+    internal partial class MongoRepository<TModel> : IRepository<TModel> where TModel : IModel
     {
         public Type ElementType => queryable.ElementType;
 

@@ -9,9 +9,9 @@ namespace DatabaseTest.MongoDB
     {
         public string Name => _database.DatabaseNamespace.DatabaseName;
 
-        public IRepository<TModel> GetRepository<TModel>() where TModel : ModelBase => GetRepository<TModel>(typeof(TModel).Name);
+        public IRepository<TModel> GetRepository<TModel>() where TModel : IModel => GetRepository<TModel>(typeof(TModel).Name);
 
-        public IRepository<TModel> GetRepository<TModel>(string name) where TModel : ModelBase => new MongoRepository<TModel>(this, name, _database.GetCollection<TModel>(name));
+        public IRepository<TModel> GetRepository<TModel>(string name) where TModel : IModel => new MongoRepository<TModel>(this, name, _database.GetCollection<TModel>(name));
 
         public IRepository GetRepository(string name) => new MongoRepository(this, name);
 

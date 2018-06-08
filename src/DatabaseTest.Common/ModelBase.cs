@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DatabaseTest
+namespace DatabaseTest.Common
 {
-    public abstract class ModelBase
+    public class ModelBase : IModel
     {
         [Key]
         public string Id { get; set; }
