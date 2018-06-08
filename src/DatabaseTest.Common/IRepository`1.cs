@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace DatabaseTest
 {
-    public interface IRepository<TModel> : IRepository, IQueryable<TModel>, ICollection<TModel>
+    public interface IRepository<TModel> : IRepository, IQueryable<TModel>, ICollection<TModel> where TModel : ModelBase
     {
         TModel this[string id] { get; set; }
         void Add(IEnumerable<TModel> items);

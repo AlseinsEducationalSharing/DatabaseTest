@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 
 namespace DatabaseTest.MongoDB
 {
     internal partial class MongoRepository<TModel> : IMongoCollection<TModel>
     {
+        public CollectionNamespace CollectionNamespace => _collection.CollectionNamespace;
+
+        IMongoDatabase IMongoCollection<TModel>.Database => _collection.Database;
+
+        public IBsonSerializer<TModel> DocumentSerializer => _collection.DocumentSerializer;
+
+        public IMongoIndexManager<TModel> Indexes => _collection.Indexes;
+
+        public MongoCollectionSettings Settings => _collection.Settings;
+
         public IAsyncCursor<TResult> Aggregate<TResult>(PipelineDefinition<TModel, TResult> pipeline, AggregateOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) => _collection.Aggregate(pipeline, options, cancellationToken);
 
         public IAsyncCursor<TResult> Aggregate<TResult>(IClientSessionHandle session, PipelineDefinition<TModel, TResult> pipeline, AggregateOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) => _collection.Aggregate(session, pipeline, options, cancellationToken);
