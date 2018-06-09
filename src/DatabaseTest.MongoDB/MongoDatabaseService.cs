@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using Alsein.Utilities.LifetimeAnnotations;
 using MongoDB.Driver;
 
 namespace DatabaseTest.MongoDB
 {
+    [Singleton]
     internal partial class MongoDatabaseService
     {
         private IMongoClient _mongoClient { get; set; }

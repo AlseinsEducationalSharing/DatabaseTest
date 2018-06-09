@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.8.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DatabaseTest.Common\DatabaseTest.Common.csproj" />
     <ProjectReference Include="..\DatabaseTest.MongoDB\DatabaseTest.MongoDB.csproj" />
     <ProjectReference Include="..\DatabaseTest.Core\DatabaseTest.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alsein.Utilities.Modulization.Autofac" Version="0.2.0" />
   </ItemGroup>
 
 </Project>
